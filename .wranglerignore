@@ -1,0 +1,9 @@
+node_modules/
+android/
+.git/
+*.zip
+package.json
+package-lock.json
+capacitor.config.json
+schema.sql
+README.txt

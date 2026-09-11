@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Little World ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="floating-hearts">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💖</span>
+    <span>💞</span>
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💗</span>
+</div>
+
+<!-- SHARED DIARY LOGIN -->
+
+<div id="authSection">
+
+    <div class="auth-heart">💕</div>
+
+    <h2>Our Little World</h2>
+
+    <p class="auth-subtitle">
+        One private diary. Just for two. ❤️
+    </p>
+
+    <!-- OPEN DIARY -->
+
+    <div id="openDiaryBox">
+
+        <h3>Welcome Back ❤️</h3>
+
+        <p class="auth-description">
+            Open your little world again.
+        </p>
+
+        <input
+            type="text"
+            id="diaryId"
+            placeholder="Diary ID"
+            autocomplete="off"
+        >
+
+        <input
+            type="password"
+            id="diaryPin"
+            placeholder="Your PIN"
+            autocomplete="off"
+        >
+
+        <button onclick="openDiary()">
+            🔐 Open Our World
+        </button>
+
+        <div class="auth-divider">
+            <span>or</span>
+        </div>
+
+        <button
+            class="create-account-button"
+            onclick="showCreateDiary()"
+        >
+            💕 Create Our Little World
+        </button>
+
+        <button
+            class="linkButton"
+            onclick="showJoinDiary()"
+        >
+            💌 Join Our Little World
+        </button>
+
+        <button
+            class="linkButton"
+            onclick="showRecovery()"
+        >
+            🆘 Need Help Getting Back In?
+        </button>
+
+    </div>
+
+
+    <!-- CREATE DIARY -->
+
+    <div id="createDiaryBox" style="display: none;">
+
+        <div class="auth-heart">💗</div>
+
+        <h3>Create Our Little World</h3>
+
+        <p class="auth-description">
+            Create one private diary that belongs to both of you. ❤️
+        </p>
+
+        <input
+            type="text"
+            id="yourName"
+            placeholder="Your name"
+            autocomplete="name"
+        >
+
+        <input
+            type="text"
+            id="partnerName"
+            placeholder="Partner's name"
+            autocomplete="off"
+        >
+
+        <input
+            type="tel"
+            id="yourPhone"
+            placeholder="Your phone number"
+            autocomplete="tel"
+        >
+
+        <input
+            type="tel"
+            id="partnerPhone"
+            placeholder="Partner's phone number"
+            autocomplete="tel"
+        >
+
+        <input
+            type="password"
+            id="createPin"
+            placeholder="Create a private PIN"
+            autocomplete="new-password"
+        >
+
+        <button onclick="createDiary()">
+            💕 Create Our World
+        </button>
+
+        <p class="email-note">
+            🔒 Your diary will belong to both of you.
+        </p>
+
+        <button
+            class="linkButton"
+            onclick="showOpenDiary()"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+
+    <!-- JOIN DIARY -->
+
+    <div id="joinDiaryBox" style="display: none;">
+
+        <div class="auth-heart">💌</div>
+
+        <h3>Join Our Little World</h3>
+
+        <p class="auth-description">
+            Your person created a world for both of you. ❤️
+        </p>
+
+        <input
+            type="text"
+            id="joinDiaryId"
+            placeholder="Enter Diary ID"
+            autocomplete="off"
+        >
+
+        <input
+            type="text"
+            id="inviteCode"
+            placeholder="Enter Invitation Code"
+            autocomplete="off"
+        >
+
+        <input
+            type="text"
+            id="joinName"
+            placeholder="Your name"
+            autocomplete="name"
+        >
+
+        <input
+            type="tel"
+            id="joinPhone"
+            placeholder="Your phone number"
+            autocomplete="tel"
+        >
+
+        <button onclick="joinDiary()">
+            💕 Join Our World
+        </button>
+
+        <p class="email-note">
+            Your partner will be able to see that you joined. ❤️
+        </p>
+
+        <button
+            class="linkButton"
+            onclick="showOpenDiary()"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+
+    <!-- DIARY CREATED -->
+
+    <div id="diaryCreatedBox" style="display: none;">
+
+        <div class="auth-heart">🎉</div>
+
+        <h3>Our World Is Ready! ❤️</h3>
+
+        <p class="auth-description">
+            Your private diary has been created.
+        </p>
+
+        <div class="diary-info">
+
+            <p><strong>Our Diary</strong></p>
+            <p id="createdDiaryName">-</p>
+
+            <p><strong>Diary ID</strong></p>
+            <p id="createdDiaryId">-</p>
+
+            <p><strong>Invitation Code</strong></p>
+            <p id="createdInviteCode">-</p>
+
+            <p><strong>Emergency Recovery Key</strong></p>
+            <p id="createdRecoveryKey">-</p>
+
+        </div>
+
+        <button onclick="shareInvitation()">
+            💕 Share Invitation
+        </button>
+
+        <button onclick="copyDiaryDetails()">
+            📋 Copy Details
+        </button>
+
+        <button onclick="continueToDiary()">
+            ❤️ Enter Our World
+        </button>
+
+    </div>
+
+
+    <!-- RECOVERY -->
+
+    <div id="recoveryBox" style="display: none;">
+
+        <div class="auth-heart">🆘</div>
+
+        <h3>Getting Back Into Our World</h3>
+
+        <p class="auth-description">
+            Don't worry. Your person can help you recover your shared diary. ❤️
+        </p>
+
+        <button
+            class="method-button"
+            onclick="partnerRecovery()"
+        >
+            <span>💕</span>
+            <strong>Partner Helps Me</strong>
+            <small>
+                Ask your partner to approve your recovery
+            </small>
+        </button>
+
+        <button
+            class="method-button"
+            onclick="emergencyRecovery()"
+        >
+            <span>🔑</span>
+            <strong>Emergency Recovery Key</strong>
+            <small>
+                Use the recovery key saved when the diary was created
+            </small>
+        </button>
+
+        <button
+            class="linkButton"
+            onclick="showOpenDiary()"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+
+    <!-- PARTNER RECOVERY -->
+
+    <div id="partnerRecoveryBox" style="display: none;">
+
+        <div class="auth-heart">💕</div>
+
+        <h3>Partner Approval</h3>
+
+        <p class="auth-description">
+            Your partner can approve your request to return to your shared world.
+        </p>
+
+        <input
+            type="text"
+            id="recoveryDiaryId"
+            placeholder="Diary ID"
+            autocomplete="off"
+        >
+
+        <input
+            type="text"
+            id="recoveryName"
+            placeholder="Your name"
+            autocomplete="name"
+        >
+
+        <button onclick="requestPartnerRecovery()">
+            💕 Send Recovery Request
+        </button>
+
+        <button
+            class="linkButton"
+            onclick="showRecovery()"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+
+    <!-- EMERGENCY RECOVERY -->
+
+    <div id="emergencyRecoveryBox" style="display: none;">
+
+        <div class="auth-heart">🔑</div>
+
+        <h3>Emergency Recovery</h3>
+
+        <p class="auth-description">
+            Enter the emergency recovery key that was created with your diary.
+        </p>
+
+        <input
+            type="text"
+            id="emergencyKey"
+            placeholder="Emergency Recovery Key"
+            autocomplete="off"
+        >
+
+        <button onclick="verifyEmergencyRecovery()">
+            🔑 Recover Our World
+        </button>
+
+        <button
+            class="linkButton"
+            onclick="showRecovery()"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+    <p id="authMessage"></p>
+
+</div>
+
+
+<!-- MAIN PAGE -->
+
+<header>
+
+    <h1>Our Little World ❤️</h1>
+
+    <p>
+        Just you, me & our memories.
+    </p>
+
+</header>
+
+
+<main>
+
+    <section class="welcome">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <h2>
+            Our Little World
+        </h2>
+
+        <p class="dashboard-subtitle">
+            Just you, me & all the little moments that belong to us. 💕
+        </p>
+
+        <div class="quick-buttons">
+
+            <button onclick="openMemories()">
+                📸 Our Memories
+            </button>
+
+            <button onclick="openLetters()">
+                💌 Love Letters
+            </button>
+
+            <button onclick="openDates()">
+                📅 Our Special Dates
+            </button>
+
+            <button onclick="openNotes()">
+                📝 Our Notes
+            </button>
+
+        </div>
+
+        <div class="couple-message">
+
+            <span>💕</span>
+
+            <p>
+                Every little moment with you<br>
+                becomes a memory worth keeping.
+            </p>
+
+            <span>💕</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORIES -->
+
+    <section
+        id="memoriesSection"
+        class="feature-section"
+        style="display: none;"
+    >
+
+        <div class="feature-icon">
+            📸
+        </div>
+
+        <h2>
+            Our Memories
+        </h2>
+
+        <p class="feature-subtitle">
+            Little moments that became beautiful memories. ❤️
+        </p>
+
+        <button
+            class="add-memory-button"
+            onclick="showMemoryForm()"
+        >
+            + Add New Memory 💕
+        </button>
+
+        <div
+            id="memoryForm"
+            class="memory-form"
+            style="display: none;"
+        >
+
+            <h3>
+                💗 Add a Beautiful Memory
+            </h3>
+
+            <input
+                type="text"
+                id="memoryTitle"
+                placeholder="Memory title..."
+            >
+
+            <input
+                type="date"
+                id="memoryDate"
+            >
+
+            <textarea
+                id="memoryStory"
+                placeholder="Tell your story... ❤️"
+            ></textarea>
+
+            <label class="photo-label">
+
+                📸 Choose a Photo
+
+                <input
+                    type="file"
+                    id="memoryPhoto"
+                    accept="image/*"
+                >
+
+            </label>
+
+            <button
+                class="save-memory-button"
+                onclick="saveMemory()"
+            >
+                💕 Save Memory
+            </button>
+
+            <button
+                class="cancel-memory-button"
+                onclick="hideMemoryForm()"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+        <div id="memoryList">
+
+            <div class="empty-memory">
+
+                <div>
+                    📷
+                </div>
+
+                <h3>
+                    No memories yet
+                </h3>
+
+                <p>
+                    Your first beautiful memory will appear here. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+        <button
+            class="back-home-button"
+            onclick="backToHome()"
+        >
+            ← Back to Our World
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer>
+    Made with ❤️ for two.
+</footer>
+
+
+<!-- SCRIPTS -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,858 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #f7e8ff);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 35px 20px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #d63384;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #777;
+    font-size: 16px;
+}
+
+/* Main */
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Welcome Card */
+
+.welcome {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 45px 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(150, 70, 120, 0.15);
+}
+
+.big-heart {
+    font-size: 70px;
+    margin-bottom: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+.welcome h2 {
+    font-size: 27px;
+    color: #c2185b;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Button */
+
+.welcome button {
+    border: none;
+    background: #d63384;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.welcome button:hover {
+    transform: scale(1.05);
+    background: #b82c70;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Heart Animation */
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Phone */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .welcome {
+        padding: 35px 20px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .big-heart {
+        font-size: 60px;
+    }
+}
+/* Memory Form */
+
+.welcome input,
+.welcome textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.welcome textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Buttons */
+
+.quick-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.quick-buttons button {
+    border: none;
+    background: #fce4ec;
+    color: #c2185b;
+    padding: 14px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Memory Cards */
+
+.memory {
+    margin-top: 20px;
+    padding: 18px;
+    background: #fff5f8;
+    border-radius: 18px;
+    text-align: left;
+}
+
+.memory h3 {
+    color: #c2185b;
+    margin-bottom: 8px;
+}
+
+.memory p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.memory small {
+    color: #999;
+}
+
+/* Memory Photo */
+
+.memory-photo {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 15px;
+}
+/* ================================
+   AUTHENTICATION DESIGN
+================================ */
+
+#authSection {
+    width: 92%;
+    max-width: 430px;
+    margin: 40px auto 20px;
+    padding: 32px 25px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(180, 70, 130, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+#authSection h2 {
+    color: #d63384;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.auth-subtitle {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+#authSection h3 {
+    color: #c2185b;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+#authSection p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+
+/* Inputs */
+
+#authSection input {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 7px 0;
+    border: 1px solid #f0d5e1;
+    border-radius: 14px;
+    outline: none;
+    font-size: 15px;
+    background: #fffafd;
+    transition: 0.3s;
+}
+
+#authSection input:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.10);
+}
+
+
+/* Main Auth Buttons */
+
+#authSection button {
+    width: 100%;
+    border: none;
+    padding: 14px 18px;
+    margin-top: 10px;
+    border-radius: 15px;
+    background: #d63384;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#authSection button:hover {
+    transform: translateY(-2px);
+    background: #b82c70;
+    box-shadow: 0 7px 18px rgba(214, 51, 132, 0.20);
+}
+
+
+/* Secondary / Back Buttons */
+
+#authSection .linkButton {
+    background: transparent;
+    color: #c2185b;
+    box-shadow: none;
+    font-weight: 500;
+}
+
+#authSection .linkButton:hover {
+    background: #fff0f6;
+    box-shadow: none;
+}
+
+
+/* OTP Screen */
+
+#phoneOTPBox {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid #f3dce7;
+}
+
+#phoneOTP {
+    text-align: center;
+    letter-spacing: 7px;
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+
+/* Authentication Message */
+
+#authMessage {
+    margin-top: 18px;
+    color: #c2185b;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    #authSection {
+        margin-top: 20px;
+        padding: 28px 20px;
+        border-radius: 24px;
+    }
+
+    #authSection h2 {
+        font-size: 25px;
+    }
+
+    #authSection h3 {
+        font-size: 20px;
+    }
+
+    #authSection button {
+        padding: 13px;
+    }
+}
+/* ================================
+   FLOATING HEARTS
+================================ */
+
+.floating-hearts {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.floating-hearts span {
+    position: absolute;
+    bottom: -60px;
+    font-size: 22px;
+    opacity: 0.35;
+    animation: floatHeart 12s linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 8%;
+    animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 20%;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 35%;
+    animation-delay: 6s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 65%;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 78%;
+    animation-delay: 8s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 88%;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(8) {
+    left: 45%;
+    animation-delay: 10s;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateY(-50vh) rotate(15deg);
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(-15deg);
+        opacity: 0;
+    }
+}
+
+/* Keep website content above the hearts */
+
+#authSection,
+header,
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+/* ================================
+   LOGIN SCREEN
+================================ */
+
+.auth-heart {
+    font-size: 48px;
+    margin-bottom: 8px;
+    animation: authHeartBeat 2s infinite;
+}
+
+.auth-description {
+    color: #888 !important;
+    font-size: 14px;
+    margin-bottom: 20px !important;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0 5px;
+    color: #aaa;
+    font-size: 13px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #f1dce6;
+}
+
+.auth-divider span {
+    padding: 0 5px;
+}
+
+#authSection .create-account-button {
+    background: #fff0f6;
+    color: #c2185b;
+    border: 1px solid #f3c8da;
+}
+
+#authSection .create-account-button:hover {
+    background: #ffe4ef;
+    color: #a91650;
+}
+
+@keyframes authHeartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+/* ================================
+   SIGNUP METHOD BUTTONS
+================================ */
+
+.method-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 18px !important;
+    margin-top: 14px !important;
+    background: #fff7fa !important;
+    color: #c2185b !important;
+    border: 1px solid #f3d5e2 !important;
+}
+
+.method-button span {
+    font-size: 32px;
+}
+
+.method-button strong {
+    font-size: 16px;
+}
+
+.method-button small {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.method-button:hover {
+    background: #ffeaf2 !important;
+    border-color: #e9aeca !important;
+    transform: translateY(-3px) !important;
+}
+/* ================================
+   PHONE OTP OPTIONS
+================================ */
+
+.otp-question {
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+    color: #777 !important;
+    font-size: 14px !important;
+}
+
+.otp-method-button {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 17px !important;
+    margin-top: 12px !important;
+    background: #fff7fa !important;
+    color: #c2185b !important;
+    border: 1px solid #f3d5e2 !important;
+}
+
+.otp-method-button span {
+    font-size: 30px;
+}
+
+.otp-method-button strong {
+    font-size: 16px;
+}
+
+.otp-method-button small {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.otp-method-button:hover {
+    background: #ffeaf2 !important;
+    border-color: #e9aeca !important;
+    transform: translateY(-3px) !important;
+}
+/* ================================
+   EMAIL SIGNUP
+================================ */
+
+.email-note {
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+    color: #999 !important;
+    font-size: 12px !important;
+}
+/* ================================
+   ACCOUNT RECOVERY
+================================ */
+
+#recoveryBox .method-button {
+    margin-top: 14px !important;
+}
+
+#recoveryBox .method-button span {
+    font-size: 30px;
+}
+
+#recoveryBox .method-button strong {
+    font-size: 16px;
+}
+
+#recoveryBox .method-button small {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+}
+/* ================================
+   HOME DASHBOARD
+================================ */
+
+.dashboard-subtitle {
+    color: #777 !important;
+    line-height: 1.6;
+    margin-bottom: 25px !important;
+}
+
+.quick-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 25px 0;
+}
+
+.quick-buttons button {
+    border: 1px solid #f3d5e2;
+    background: #fff7fa;
+    color: #c2185b;
+    padding: 18px 10px;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.quick-buttons button:hover {
+    transform: translateY(-4px);
+    background: #ffeaf2;
+    box-shadow: 0 8px 20px rgba(194, 24, 91, 0.12);
+}
+
+.couple-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    padding: 18px;
+    background: #fff5f8;
+    border-radius: 18px;
+}
+
+.couple-message span {
+    font-size: 20px;
+}
+
+.couple-message p {
+    margin: 0 !important;
+    color: #777 !important;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Mobile Dashboard */
+
+@media (max-width: 600px) {
+
+    .quick-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .couple-message {
+        gap: 8px;
+    }
+}
+/* ================================
+   MEMORIES SECTION
+================================ */
+
+.feature-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 40px 25px;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(150, 70, 120, 0.15);
+}
+
+.feature-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.feature-section h2 {
+    color: #c2185b;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.feature-subtitle {
+    color: #888 !important;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px !important;
+}
+
+.add-memory-button {
+    border: none;
+    background: #d63384;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.add-memory-button:hover {
+    transform: translateY(-3px);
+    background: #b82c70;
+}
+
+.empty-memory {
+    margin-top: 30px;
+    padding: 35px 20px;
+    background: #fff5f8;
+    border: 1px dashed #efbfd3;
+    border-radius: 20px;
+}
+
+.empty-memory div {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.empty-memory h3 {
+    color: #c2185b;
+    margin-bottom: 8px;
+}
+
+.empty-memory p {
+    color: #999 !important;
+    font-size: 14px;
+}
+
+.back-home-button {
+    margin-top: 25px;
+    border: none;
+    background: transparent;
+    color: #c2185b;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.back-home-button:hover {
+    background: #fff0f6;
+    border-radius: 12px;
+}
+/* ================================
+   MEMORY FORM
+================================ */
+
+.memory-form {
+    margin-top: 25px;
+    padding: 25px 20px;
+    background: #fff5f8;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.memory-form h3 {
+    text-align: center;
+    color: #c2185b;
+    margin-bottom: 18px;
+}
+
+.memory-form input,
+.memory-form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #f0d5e1;
+    border-radius: 12px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background: white;
+}
+
+.memory-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.memory-form input:focus,
+.memory-form textarea:focus {
+    border-color: #d63384;
+    box-shadow: 0 0 0 3px rgba(214, 51, 132, 0.08);
+}
+
+.photo-label {
+    display: block;
+    padding: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #c2185b;
+    background: white;
+    border: 1px dashed #e9aeca;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.photo-label input {
+    margin-top: 10px;
+    margin-bottom: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.save-memory-button,
+.cancel-memory-button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 13px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.save-memory-button {
+    background: #d63384;
+    color: white;
+}
+
+.cancel-memory-button {
+    background: #ffeaf2;
+    color: #c2185b;
+}
+
+.save-memory-button:hover {
+    background: #b82c70;
+}
