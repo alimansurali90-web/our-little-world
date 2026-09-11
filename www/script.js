@@ -35,7 +35,7 @@ function hideAllDiaryBoxes() {
 
 function showOpenDiary() {
 
-    hideAllDiaryBoxes();
+
 
     const box = document.getElementById("openDiaryBox");
 
@@ -49,7 +49,7 @@ function showOpenDiary() {
 
 function showCreateDiary() {
 
-    hideAllDiaryBoxes();
+
 
     const box = document.getElementById("createDiaryBox");
 
@@ -63,7 +63,7 @@ function showCreateDiary() {
 
 function showJoinDiary() {
 
-    hideAllDiaryBoxes();
+
 
     const box = document.getElementById("joinDiaryBox");
 
@@ -77,7 +77,7 @@ function showJoinDiary() {
 
 function showRecovery() {
 
-    hideAllDiaryBoxes();
+
 
     const box = document.getElementById("recoveryBox");
 
@@ -91,7 +91,7 @@ function showRecovery() {
 
 function partnerRecovery() {
 
-    hideAllDiaryBoxes();
+
 
     const box = document.getElementById("partnerRecoveryBox");
 
@@ -105,7 +105,7 @@ function partnerRecovery() {
 
 function emergencyRecovery() {
 
-    hideAllDiaryBoxes();
+
 
     const box =
         document.getElementById("emergencyRecoveryBox");
@@ -330,7 +330,7 @@ message.textContent =
     }
 
 
-    hideAllDiaryBoxes();
+
 
 
     const createdBox =
