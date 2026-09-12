@@ -305,9 +305,6 @@ const { data, error } = await supabaseClient.rpc(
     "create_our_world",
     {
         p_diary_name: diaryName,
-        p_diary_id: diaryId,
-        p_invite_code: inviteCode,
-        p_recovery_key: recoveryKey,
         p_person1_name: yourName,
         p_person1_phone: yourPhone,
         p_person2_name: partnerName,
@@ -1582,3 +1579,5 @@ function escapeHTML(value) {
         .replace(/'/g, "&#039;");
 
 }
+
+
