@@ -305,10 +305,10 @@ const { data, error } = await supabaseClient.rpc(
     "create_our_world",
     {
         p_diary_name: diaryName,
-        p_person1_name: yourName,
-        p_person1_phone: yourPhone,
-        p_person2_name: partnerName,
-        p_person2_phone: partnerPhone,
+        p1_name: yourName,
+        p1_phone: yourPhone,
+        p2_name: partnerName,
+        p2_phone: partnerPhone,
         p_pin: pin
     }
 );
@@ -1579,5 +1579,6 @@ function escapeHTML(value) {
         .replace(/'/g, "&#039;");
 
 }
+
 
 
