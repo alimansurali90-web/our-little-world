@@ -5,3 +5,2987 @@
 .avatar-wrap img.avatar-img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
 .photo-upload{display:flex;flex-direction:column;gap:8px;padding:14px;border:1px dashed #d9a6bb;border-radius:18px;background:#fff8fb}
 .photo-preview{width:120px;height:120px;border-radius:50%;object-fit:cover;display:block;margin:8px auto}
+/* Mobile memory cards: 2 columns */
+@media (max-width: 560px) {
+  #content-body .item-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  #content-body .item-card {
+    min-width: 0;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  #content-body .item-card h3 {
+    font-size: 14px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+
+  #content-body .item-card .date {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  #content-body .item-photo {
+    width: 100%;
+    height: 105px;
+    max-height: 105px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 6px 0;
+  }
+
+  #content-body .item-card p {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  #content-body .card-actions {
+    gap: 5px;
+    margin-top: 8px;
+  }
+
+  #content-body .card-actions button {
+    padding: 6px 3px;
+    font-size: 11px;
+    border-radius: 8px;
+  }
+}
+/* Our Little World V2 visual polish */
+:root{--owl-primary:#8f315d;--owl-primary-dark:#702548;--owl-soft:#fff5f8;--owl-border:#efd7e2;--owl-shadow:0 14px 40px rgba(112,37,72,.10)}
+body{background:radial-gradient(circle at 10% 0%,#fff 0,transparent 34%),radial-gradient(circle at 100% 20%,#f4e9ff 0,transparent 32%),linear-gradient(145deg,#fff3f7,#fbf7ff 52%,#fffaf3);letter-spacing:.05px}
+button,input,textarea,select{transition:background .2s,border-color .2s,box-shadow .2s,transform .2s,opacity .2s}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #c66b96;outline-offset:3px}
+.auth-card,.couple-card,.item-card,.form-card,.modal-box{box-shadow:var(--owl-shadow)}
+.auth-card{border-color:#ffffffcc}
+.brand-heart{color:var(--owl-primary)}
+.feature{position:relative;overflow:hidden;border:1px solid #ffffffb8}
+.feature::after{content:"";position:absolute;width:110px;height:110px;right:-42px;top:-42px;border-radius:50%;background:#ffffff55;pointer-events:none}
+.feature:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(112,37,72,.14)}
+.quick-row button:hover,.card-actions button:hover{background:#fff;border-color:#d8a6bc;transform:translateY(-1px)}
+.primary:hover{filter:saturate(1.08);box-shadow:0 12px 28px #8f315d44}
+.item-card{position:relative;overflow:hidden}
+.item-card::before{content:"";display:block;position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(#d985aa,#b58ad9);opacity:.65}
+.item-card h3,.form-card h2{overflow-wrap:anywhere}
+.empty{box-shadow:0 10px 28px rgba(112,37,72,.05)}
+@media(max-width:560px){.topbar h1{font-size:21px}.couple-card{padding:14px;border-radius:20px}.avatars div:not(.plus){width:43px;height:43px}.feature{border-radius:20px}.feature b{font-size:30px}.feature span{font-size:16px}.feature small{font-size:11px}.quick-row{grid-template-columns:repeat(2,1fr)}.quick-row button{padding:11px 6px}.modal-box{padding:18px}.form-card{padding:15px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+Add-Content "C:\Users\MANSUR\our-little-world-app\www\style.css" @'
+
+/* OWL MOBILE MEMORY PHOTO SIZE FIX */
+@media (max-width: 600px) {
+  .memory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+
+  .memory-card {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .memory-photo {
+    width: 100% !important;
+    height: 110px !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+}
+/* OWL FINAL MOBILE MEMORY CARD FIX */
+@media (max-width: 600px) {
+  #content-body .memory-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  #content-body .memory-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  #content-body .memory-visual {
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+  }
+
+  #content-body .memory-photo {
+    width: 100% !important;
+    height: 110px !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+}
+
+/* OWL DESKTOP MEMORY CARD FIX */
+@media (min-width: 601px) {
+  #content-body .memory-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  #content-body .memory-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  #content-body .memory-visual {
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 14px !important;
+  }
+
+  #content-body .memory-photo {
+    width: 100% !important;
+    height: 220px !important;
+    max-width: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+}
+
+/* OWL SPECIAL DATES CARD STYLE */
+.date-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.date-card .section-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #8f5b73;
+  background: #f8e9f0;
+  padding: 5px 9px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+.date-card .item-photo {
+  display: block !important;
+  width: 100% !important;
+  height: 180px !important;
+  max-height: 180px !important;
+  object-fit: cover !important;
+  border-radius: 15px !important;
+  margin: 12px 0 !important;
+}
+
+/* OWL SPECIAL DATES - DESKTOP FINAL LOOK */
+@media (min-width: 601px) {
+  #content-body .date-card {
+    max-width: 620px !important;
+    margin: 0 auto !important;
+    padding: 18px !important;
+  }
+
+  #content-body .date-card .item-photo {
+    width: 100% !important;
+    height: 190px !important;
+    max-height: 190px !important;
+    object-fit: cover !important;
+    border-radius: 15px !important;
+    margin: 12px 0 !important;
+    display: block !important;
+  }
+
+  #content-body .date-card h3 {
+    margin: 4px 0 5px !important;
+  }
+
+  #content-body .date-card .card-actions {
+    display: flex !important;
+    gap: 10px !important;
+  }
+
+  #content-body .date-card .card-actions button {
+    flex: 1 !important;
+  }
+}
+
+/* OWL NOTES - DESKTOP LOOK */
+@media (min-width: 601px) {
+  #content-body .note-card {
+    max-width: 620px !important;
+    margin: 0 auto !important;
+    padding: 22px !important;
+    background: #fffdf9 !important;
+    border: 1px solid #eadfd3 !important;
+    border-radius: 22px !important;
+    box-shadow: 0 14px 35px rgba(90, 55, 35, .08) !important;
+  }
+
+  #content-body .note-card .section-label {
+    display: inline-block !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px !important;
+    color: #8a6048 !important;
+    background: #f5eadf !important;
+    padding: 5px 10px !important;
+    border-radius: 999px !important;
+    margin-bottom: 10px !important;
+  }
+
+  #content-body .note-card h3 {
+    margin: 4px 0 8px !important;
+    font-size: 24px !important;
+  }
+
+  #content-body .note-card p {
+    line-height: 1.7 !important;
+    color: #5f5149 !important;
+    margin: 0 0 18px !important;
+  }
+
+  #content-body .note-card .card-actions {
+    display: flex !important;
+    gap: 10px !important;
+  }
+
+  #content-body .note-card .card-actions button {
+    flex: 1 !important;
+  }
+}
+
+/* OWL LOVE LETTERS - DESKTOP LOOK */
+@media (min-width: 601px) {
+  #content-body .letter-card {
+    max-width: 620px !important;
+    margin: 0 auto !important;
+    padding: 24px !important;
+    background: #fff9fb !important;
+    border: 1px solid #efd8e1 !important;
+    border-radius: 24px !important;
+    box-shadow: 0 14px 35px rgba(120, 55, 80, .09) !important;
+  }
+
+  #content-body .letter-card .section-label {
+    display: inline-block !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px !important;
+    color: #9a536f !important;
+    background: #f8e5ed !important;
+    padding: 5px 10px !important;
+    border-radius: 999px !important;
+    margin-bottom: 10px !important;
+  }
+
+  #content-body .letter-card h3 {
+    margin: 4px 0 8px !important;
+    font-size: 25px !important;
+  }
+
+  #content-body .letter-card p {
+    line-height: 1.8 !important;
+    color: #5e4b54 !important;
+    margin: 0 0 18px !important;
+  }
+
+  #content-body .letter-card .item-photo {
+    display: block !important;
+    width: 100% !important;
+    height: 190px !important;
+    max-height: 190px !important;
+    object-fit: cover !important;
+    border-radius: 15px !important;
+    margin: 12px 0 18px !important;
+  }
+
+  #content-body .letter-card .card-actions {
+    display: flex !important;
+    gap: 10px !important;
+  }
+
+  #content-body .letter-card .card-actions button {
+    flex: 1 !important;
+  }
+}
+
+/* =========================================================
+   OUR LITTLE WORLD � DASHBOARD MAKEOVER V1
+   Visual only � no JavaScript/database changes
+   ========================================================= */
+
+.world-screen {
+  background:
+    radial-gradient(circle at 15% 5%, rgba(255,255,255,.95), transparent 28%),
+    radial-gradient(circle at 90% 18%, rgba(238,220,255,.65), transparent 30%),
+    linear-gradient(145deg,#fff1f6 0%,#faf5ff 52%,#fff9f1 100%);
+}
+
+.world-screen .topbar {
+  padding-top: calc(22px + env(safe-area-inset-top));
+  padding-bottom: 18px;
+  background: rgba(255,250,249,.78);
+  border-bottom: 1px solid rgba(255,255,255,.9);
+}
+
+.world-screen .topbar small {
+  color: #a45f7d;
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+}
+
+.world-screen .topbar h1 {
+  font-size: clamp(25px,6vw,34px);
+  margin-top: 6px;
+  letter-spacing: -.5px;
+}
+
+.world-screen .icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.8);
+  box-shadow: 0 8px 22px rgba(112,37,72,.09);
+}
+
+/* Couple hero card */
+.world-screen .couple-card {
+  position: relative;
+  overflow: hidden;
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.96),rgba(255,244,249,.9));
+  border: 1px solid rgba(255,255,255,.95);
+  box-shadow:
+    0 18px 45px rgba(112,37,72,.11),
+    inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.world-screen .couple-card::after {
+  content: "?";
+  position: absolute;
+  right: 22px;
+  top: 14px;
+  font-size: 28px;
+  color: rgba(143,49,93,.10);
+  pointer-events: none;
+}
+
+.world-screen .avatars {
+  position: relative;
+  z-index: 1;
+}
+
+.world-screen .avatars div:not(.plus) {
+  width: 56px;
+  height: 56px;
+  font-size: 25px;
+  box-shadow: 0 7px 18px rgba(112,37,72,.10);
+}
+
+.world-screen .couple-card h2 {
+  font-size: 19px;
+  color: #65233f;
+}
+
+.world-screen .couple-card p {
+  font-size: 12px;
+}
+
+/* Main feature cards */
+.world-screen .feature-grid {
+  margin-top: 18px;
+  gap: 14px;
+}
+
+.world-screen .feature {
+  position: relative;
+  min-height: 158px;
+  padding: 19px;
+  border-radius: 27px;
+  border: 1px solid rgba(255,255,255,.95);
+  box-shadow: 0 14px 35px rgba(112,37,72,.09);
+  overflow: hidden;
+}
+
+.world-screen .feature::before {
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  right: -25px;
+  bottom: -25px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.35);
+  pointer-events: none;
+}
+
+.world-screen .feature b {
+  font-size: 38px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.world-screen .feature span {
+  position: relative;
+  z-index: 1;
+  font-size: 19px;
+  color: #542338;
+  margin-top: 8px;
+}
+
+.world-screen .feature small {
+  position: relative;
+  z-index: 1;
+  font-size: 11px;
+  color: #806473;
+}
+
+.world-screen .memory {
+  background: linear-gradient(145deg,#ffe7f0,#fff2f7);
+}
+
+.world-screen .dates {
+  background: linear-gradient(145deg,#eee5ff,#f8f2ff);
+}
+
+.world-screen .notes {
+  background: linear-gradient(145deg,#fff0d7,#fff8eb);
+}
+
+.world-screen .letters {
+  background: linear-gradient(145deg,#e3f5e9,#f1fbf4);
+}
+
+/* Gentle press effect */
+.world-screen .feature:active {
+  transform: scale(.975);
+}
+
+/* Bottom shortcuts */
+.world-screen .quick-row {
+  margin-top: 18px;
+  gap: 9px;
+}
+
+.world-screen .quick-row button {
+  min-height: 48px;
+  border-radius: 17px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(234,214,223,.9);
+  box-shadow: 0 7px 20px rgba(112,37,72,.05);
+  font-size: 13px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.world-screen .quick-row button:active {
+  transform: scale(.97);
+}
+
+/* Mobile refinement */
+@media(max-width:560px) {
+  .world-screen .topbar {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .world-screen .couple-card {
+    width: calc(100% - 24px);
+    margin-top: 16px;
+    padding: 17px;
+    border-radius: 24px;
+  }
+
+  .world-screen .avatars div:not(.plus) {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .world-screen .feature-grid {
+    width: calc(100% - 24px);
+    gap: 11px;
+  }
+
+  .world-screen .feature {
+    min-height: 145px;
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .world-screen .feature b {
+    font-size: 32px;
+  }
+
+  .world-screen .feature span {
+    font-size: 16px;
+  }
+
+  .world-screen .feature small {
+    font-size: 10px;
+  }
+
+  .world-screen .quick-row {
+    width: calc(100% - 24px);
+    margin-top: 14px;
+  }
+}
+
+/* =========================================================
+   OUR LITTLE WORLD — PREMIUM / LUXURY STYLE V1
+   Visual only — no JavaScript or database changes
+   ========================================================= */
+
+:root{
+  --owl-bg:#f7f1ed;
+  --owl-card:#fffdfb;
+  --owl-text:#342a2a;
+  --owl-muted:#806f70;
+  --owl-gold:#b58a52;
+  --owl-gold-soft:#ead8bc;
+  --owl-dark:#3b2929;
+  --owl-shadow:0 18px 45px rgba(70,45,45,.10);
+}
+
+/* Premium page background */
+body{
+  background:
+    radial-gradient(circle at 10% 5%,rgba(234,216,188,.34),transparent 28%),
+    radial-gradient(circle at 90% 15%,rgba(214,190,202,.25),transparent 30%),
+    linear-gradient(145deg,#faf6f2 0%,#f4ece8 48%,#f8f2ed 100%);
+  color:var(--owl-text);
+}
+
+/* Main dashboard */
+.world-screen{
+  background:transparent;
+}
+
+/* Top heading */
+.world-screen .topbar{
+  padding-top:22px;
+}
+
+.world-screen .topbar small{
+  letter-spacing:3px;
+  font-size:10px;
+  color:var(--owl-gold);
+  font-weight:700;
+}
+
+.world-screen .topbar h1{
+  letter-spacing:-.5px;
+  color:var(--owl-dark);
+}
+
+/* Logout button */
+.world-screen .icon-btn{
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(181,138,82,.20);
+  box-shadow:0 8px 22px rgba(70,45,45,.08);
+  backdrop-filter:blur(12px);
+}
+
+/* Couple card */
+.couple-card{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,
+    rgba(255,253,251,.96),
+    rgba(250,243,238,.94));
+  border:1px solid rgba(181,138,82,.22);
+  border-radius:28px;
+  box-shadow:var(--owl-shadow);
+}
+
+.couple-card::before{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  right:-65px;
+  top:-75px;
+  background:rgba(181,138,82,.10);
+}
+
+.couple-card::after{
+  content:"";
+  position:absolute;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  left:-45px;
+  bottom:-45px;
+  background:rgba(214,190,202,.14);
+}
+
+/* Avatars */
+.avatar-wrap{
+  border:2px solid rgba(181,138,82,.30);
+  background:linear-gradient(145deg,#fff,#f4e8df);
+  box-shadow:0 8px 24px rgba(70,45,45,.12);
+}
+
+.plus{
+  color:var(--owl-gold);
+  font-weight:700;
+}
+
+/* Feature cards */
+.feature{
+  position:relative;
+  overflow:hidden;
+  background:rgba(255,253,251,.88);
+  border:1px solid rgba(181,138,82,.17);
+  border-radius:24px;
+  box-shadow:0 12px 30px rgba(70,45,45,.075);
+  backdrop-filter:blur(12px);
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+
+.feature::before{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  right:-48px;
+  top:-48px;
+  background:rgba(181,138,82,.07);
+  pointer-events:none;
+}
+
+.feature:hover{
+  transform:translateY(-4px);
+  border-color:rgba(181,138,82,.34);
+  box-shadow:0 18px 38px rgba(70,45,45,.12);
+}
+
+.feature b{
+  filter:saturate(.8);
+}
+
+.feature span{
+  color:var(--owl-dark);
+  font-weight:700;
+}
+
+.feature small{
+  color:var(--owl-muted);
+}
+
+/* Bottom menu */
+.quick-row button{
+  background:rgba(255,253,251,.72);
+  border:1px solid rgba(181,138,82,.15);
+  color:var(--owl-dark);
+  box-shadow:0 8px 22px rgba(70,45,45,.055);
+  backdrop-filter:blur(10px);
+}
+
+.quick-row button:hover{
+  border-color:rgba(181,138,82,.30);
+  background:#fffdfb;
+}
+
+/* General content cards */
+.item-card,
+.note-card,
+.letter-card{
+  border:1px solid rgba(181,138,82,.15);
+  box-shadow:0 12px 30px rgba(70,45,45,.07);
+}
+
+/* Premium buttons */
+button.primary,
+.primary-btn{
+  box-shadow:0 10px 24px rgba(70,45,45,.13);
+}
+
+/* Small gold accent */
+hr{
+  border-color:rgba(181,138,82,.16);
+}
+
+/* Mobile refinement */
+@media(max-width:600px){
+  .couple-card{
+    border-radius:24px;
+    box-shadow:0 14px 32px rgba(70,45,45,.09);
+  }
+
+  .feature{
+    border-radius:21px;
+  }
+
+  .quick-row button{
+    border-radius:16px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — PREMIUM FEATURE CARDS V2
+   ========================================================= */
+
+.feature-grid{
+  gap:16px;
+}
+
+.feature{
+  min-height:145px;
+  padding:22px 18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  align-items:flex-start;
+}
+
+.feature b{
+  font-size:30px;
+  margin-bottom:auto;
+  line-height:1;
+  opacity:.9;
+}
+
+.feature span{
+  font-size:16px;
+  letter-spacing:-.15px;
+  margin-top:18px;
+}
+
+.feature small{
+  margin-top:5px;
+  font-size:11px;
+  letter-spacing:.1px;
+}
+
+.feature:nth-child(1){
+  background:linear-gradient(145deg,#fffdfb,#f8eee9);
+}
+
+.feature:nth-child(2){
+  background:linear-gradient(145deg,#fffdfb,#f7f0e5);
+}
+
+.feature:nth-child(3){
+  background:linear-gradient(145deg,#fffdfb,#f3eeee);
+}
+
+.feature:nth-child(4){
+  background:linear-gradient(145deg,#fffdfb,#f6eee8);
+}
+
+@media(max-width:600px){
+  .feature-grid{
+    gap:12px;
+  }
+
+  .feature{
+    min-height:132px;
+    padding:18px 15px;
+  }
+
+  .feature b{
+    font-size:27px;
+  }
+
+  .feature span{
+    font-size:15px;
+  }
+
+  .feature small{
+    font-size:10px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — 4 FEATURE CARDS
+   Soft premium individual colors
+   ========================================================= */
+
+.feature{
+  border:1px solid rgba(90,70,90,.10);
+  box-shadow:0 10px 28px rgba(60,45,65,.07);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+
+.feature:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 34px rgba(60,45,65,.12);
+}
+
+/* Memories — soft lavender */
+.feature.memory{
+  background:linear-gradient(145deg,#f5efff,#eee5fb);
+  border-color:#e2d4f2;
+}
+
+/* Special Dates — soft peach */
+.feature.dates{
+  background:linear-gradient(145deg,#fff4ea,#ffeadc);
+  border-color:#f1d8c6;
+}
+
+/* Notes — soft blue */
+.feature.notes{
+  background:linear-gradient(145deg,#eef7ff,#e3f0fa);
+  border-color:#d2e3ef;
+}
+
+/* Love Letters — soft pink */
+.feature.letters{
+  background:linear-gradient(145deg,#fff0f4,#fbe3eb);
+  border-color:#efd1dc;
+}
+
+/* Keep text elegant and readable */
+.feature span{
+  color:#3d3338;
+}
+
+.feature small{
+  color:#756a70;
+}
+
+/* Soft icon circles */
+.feature b{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:48px;
+  height:48px;
+  border-radius:16px;
+  background:rgba(255,255,255,.58);
+  box-shadow:0 5px 14px rgba(70,50,70,.06);
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — PREMIUM FEATURE CARDS V2
+   Polish only — functionality unchanged
+   ========================================================= */
+
+.feature{
+  min-height:145px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:7px;
+  position:relative;
+  isolation:isolate;
+}
+
+.feature::after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  right:-55px;
+  bottom:-65px;
+  background:rgba(255,255,255,.28);
+  pointer-events:none;
+  z-index:-1;
+}
+
+.feature b{
+  width:50px;
+  height:50px;
+  border-radius:17px;
+  font-size:23px;
+  margin-bottom:4px;
+  background:rgba(255,255,255,.62);
+  box-shadow:0 6px 16px rgba(70,50,70,.07);
+}
+
+.feature span{
+  font-size:16px;
+  letter-spacing:-.1px;
+}
+
+.feature small{
+  font-size:12px;
+  line-height:1.4;
+}
+
+/* Individual icon accents */
+.feature.memory b{
+  background:rgba(255,255,255,.65);
+}
+
+.feature.dates b{
+  background:rgba(255,255,255,.65);
+}
+
+.feature.notes b{
+  background:rgba(255,255,255,.65);
+}
+
+.feature.letters b{
+  background:rgba(255,255,255,.65);
+}
+
+/* Smooth premium interaction */
+.feature:active{
+  transform:scale(.985);
+}
+
+/* Phone */
+@media(max-width:600px){
+  .feature{
+    min-height:132px;
+    padding:16px;
+    gap:5px;
+  }
+
+  .feature b{
+    width:44px;
+    height:44px;
+    border-radius:15px;
+    font-size:20px;
+  }
+
+  .feature span{
+    font-size:14px;
+  }
+
+  .feature small{
+    font-size:11px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — PREMIUM COUPLE CARD
+   Visual only — functionality unchanged
+   ========================================================= */
+
+.couple-card{
+  position:relative;
+  overflow:hidden;
+  padding:22px;
+  border-radius:28px;
+  background:
+    linear-gradient(135deg,
+      rgba(255,255,255,.94),
+      rgba(249,240,234,.90));
+  border:1px solid rgba(181,138,82,.22);
+  box-shadow:
+    0 18px 45px rgba(70,45,45,.10),
+    inset 0 1px 0 rgba(255,255,255,.85);
+  backdrop-filter:blur(14px);
+}
+
+.couple-card::before{
+  content:"";
+  position:absolute;
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  right:-70px;
+  top:-90px;
+  background:rgba(181,138,82,.10);
+  pointer-events:none;
+}
+
+.couple-card::after{
+  content:"";
+  position:absolute;
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  left:-60px;
+  bottom:-65px;
+  background:rgba(214,190,202,.13);
+  pointer-events:none;
+}
+
+/* Avatar area */
+.couple-card .avatars{
+  position:relative;
+  z-index:2;
+  gap:10px;
+}
+
+.couple-card .avatar-wrap{
+  border:2px solid rgba(181,138,82,.28);
+  background:linear-gradient(145deg,#fff,#f3e8df);
+  box-shadow:
+    0 8px 22px rgba(70,45,45,.12),
+    0 0 0 5px rgba(255,255,255,.45);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.couple-card .avatar-wrap:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 12px 28px rgba(70,45,45,.16),
+    0 0 0 5px rgba(255,255,255,.58);
+}
+
+.couple-card .plus{
+  position:relative;
+  z-index:3;
+  color:#b58a52;
+  font-size:20px;
+  font-weight:700;
+}
+
+/* Couple information */
+.couple-card h2{
+  position:relative;
+  z-index:2;
+  color:#3b2929;
+  font-weight:700;
+  letter-spacing:-.3px;
+}
+
+.couple-card p{
+  position:relative;
+  z-index:2;
+  color:#806f70;
+}
+
+/* Phone */
+@media(max-width:600px){
+  .couple-card{
+    padding:18px;
+    border-radius:24px;
+  }
+
+  .couple-card .avatar-wrap{
+    box-shadow:
+      0 7px 18px rgba(70,45,45,.11),
+      0 0 0 4px rgba(255,255,255,.45);
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — COUPLE CARD V2
+   Romantic + clean premium design
+   ========================================================= */
+
+.couple-card{
+  position:relative;
+  overflow:hidden;
+  padding:24px 20px;
+  border-radius:26px;
+
+  background:
+    linear-gradient(135deg,#fffdfb 0%,#fff7f5 55%,#fdf1f5 100%);
+
+  border:1px solid rgba(190,145,155,.18);
+
+  box-shadow:
+    0 12px 32px rgba(80,55,65,.08),
+    inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+/* soft romantic glow */
+.couple-card::before{
+  content:"";
+  position:absolute;
+  width:140px;
+  height:140px;
+  right:-55px;
+  top:-70px;
+  border-radius:50%;
+  background:rgba(236,193,207,.18);
+  pointer-events:none;
+}
+
+.couple-card::after{
+  content:"";
+  position:absolute;
+  width:90px;
+  height:90px;
+  left:-45px;
+  bottom:-50px;
+  border-radius:50%;
+  background:rgba(218,199,238,.15);
+  pointer-events:none;
+}
+
+/* avatars */
+.couple-card .avatars{
+  position:relative;
+  z-index:2;
+  gap:12px;
+}
+
+.couple-card .avatar-wrap{
+  border:3px solid #fff;
+  background:#fff;
+  box-shadow:
+    0 5px 18px rgba(70,50,65,.13),
+    0 0 0 1px rgba(190,145,155,.18);
+
+  transition:transform .2s ease;
+}
+
+.couple-card .avatar-wrap:hover{
+  transform:scale(1.04);
+}
+
+/* center + */
+.couple-card .plus{
+  position:relative;
+  z-index:3;
+
+  width:30px;
+  height:30px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#fff;
+  color:#c58b9d;
+
+  font-size:17px;
+  font-weight:700;
+
+  box-shadow:0 4px 12px rgba(70,50,65,.10);
+}
+
+/* names */
+.couple-card h2{
+  position:relative;
+  z-index:2;
+
+  margin-top:12px;
+
+  color:#382d32;
+  font-size:19px;
+  font-weight:700;
+  letter-spacing:-.3px;
+}
+
+.couple-card p{
+  position:relative;
+  z-index:2;
+
+  margin-top:4px;
+
+  color:#8a737b;
+  font-size:12px;
+}
+
+/* tiny romantic divider */
+.couple-card h2::after{
+  content:"";
+  display:block;
+
+  width:34px;
+  height:2px;
+
+  margin:9px auto 0;
+
+  border-radius:10px;
+
+  background:linear-gradient(90deg,#e4b8c7,#d8c2ea);
+}
+
+/* mobile */
+@media(max-width:600px){
+  .couple-card{
+    padding:20px 16px;
+    border-radius:23px;
+  }
+
+  .couple-card h2{
+    font-size:17px;
+  }
+
+  .couple-card p{
+    font-size:11px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — PREMIUM HEADER V1
+   ========================================================= */
+
+.world-screen .topbar{
+  position:relative;
+  padding:22px 2px 18px;
+}
+
+.world-screen .topbar small{
+  display:block;
+  margin-bottom:5px;
+
+  color:#b58a52;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.world-screen .topbar h1{
+  margin:0;
+
+  color:#352b30;
+  font-size:27px;
+  font-weight:750;
+  letter-spacing:-.8px;
+  line-height:1.15;
+}
+
+/* subtle line beneath the title */
+.world-screen .topbar h1::after{
+  content:"";
+
+  display:block;
+
+  width:42px;
+  height:2px;
+
+  margin-top:10px;
+
+  border-radius:10px;
+
+  background:linear-gradient(90deg,#c99b63,#e5c7d3);
+}
+
+/* logout */
+.world-screen .topbar .icon-btn{
+  width:42px;
+  height:42px;
+
+  border-radius:14px;
+
+  background:rgba(255,255,255,.82);
+  border:1px solid rgba(181,138,82,.16);
+
+  color:#765e62;
+
+  box-shadow:0 7px 18px rgba(70,50,55,.07);
+
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.world-screen .topbar .icon-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 22px rgba(70,50,55,.11);
+}
+
+/* phone */
+@media(max-width:600px){
+  .world-screen .topbar{
+    padding-top:17px;
+    padding-bottom:15px;
+  }
+
+  .world-screen .topbar h1{
+    font-size:23px;
+  }
+
+  .world-screen .topbar small{
+    font-size:8px;
+    letter-spacing:2.5px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — WARM ROMANTIC HEADER V2
+   ========================================================= */
+
+.world-screen .topbar{
+  padding:20px 2px 16px;
+}
+
+.world-screen .topbar small{
+  display:block;
+  margin-bottom:4px;
+
+  color:#a98272;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2.2px;
+}
+
+.world-screen .topbar h1{
+  margin:0;
+
+  color:#382c32;
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:-.7px;
+  line-height:1.2;
+}
+
+/* small romantic accent */
+.world-screen .topbar h1::after{
+  content:"";
+  display:block;
+
+  width:28px;
+  height:3px;
+
+  margin-top:8px;
+
+  border-radius:20px;
+
+  background:#dfb5c4;
+}
+
+/* logout button */
+.world-screen .topbar .icon-btn{
+  width:40px;
+  height:40px;
+
+  border-radius:50%;
+
+  background:#fff8f7;
+  border:1px solid #f0dfe0;
+
+  color:#80666d;
+
+  box-shadow:0 6px 16px rgba(75,50,60,.07);
+
+  transition:transform .2s ease;
+}
+
+.world-screen .topbar .icon-btn:hover{
+  transform:scale(1.05);
+}
+
+/* phone */
+@media(max-width:600px){
+  .world-screen .topbar{
+    padding-top:15px;
+    padding-bottom:13px;
+  }
+
+  .world-screen .topbar h1{
+    font-size:22px;
+  }
+
+  .world-screen .topbar small{
+    font-size:8px;
+    letter-spacing:2px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — CLEAN ROMANTIC HEADER V3
+   ========================================================= */
+
+.world-screen .topbar{
+  padding:18px 2px 15px;
+  align-items:center;
+}
+
+.world-screen .topbar small{
+  display:block;
+  margin-bottom:3px;
+
+  color:#927b82;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:1.8px;
+}
+
+.world-screen .topbar h1{
+  margin:0;
+
+  color:#332b30;
+  font-size:25px;
+  font-weight:700;
+  letter-spacing:-.6px;
+  line-height:1.2;
+}
+
+/* tiny heart accent */
+.world-screen .topbar h1::after{
+  content:"♡";
+
+  display:inline-block;
+  margin-left:7px;
+
+  color:#d39aaa;
+  font-size:18px;
+  font-weight:400;
+}
+
+/* simple logout */
+.world-screen .topbar .icon-btn{
+  width:38px;
+  height:38px;
+
+  border-radius:12px;
+
+  background:rgba(255,255,255,.72);
+  border:1px solid rgba(150,120,130,.13);
+
+  color:#786b70;
+
+  box-shadow:0 5px 14px rgba(70,50,60,.05);
+}
+
+/* phone */
+@media(max-width:600px){
+  .world-screen .topbar{
+    padding-top:14px;
+    padding-bottom:12px;
+  }
+
+  .world-screen .topbar h1{
+    font-size:21px;
+  }
+
+  .world-screen .topbar small{
+    font-size:8px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — PREMIUM QUICK BUTTONS V1
+   Visual only — functionality unchanged
+   ========================================================= */
+
+.quick-row{
+  gap:10px;
+  margin-top:18px;
+}
+
+.quick-row button{
+  min-height:46px;
+  padding:11px 13px;
+
+  border-radius:16px;
+
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(150,120,130,.13);
+
+  color:#55474d;
+
+  font-size:12px;
+  font-weight:600;
+
+  box-shadow:0 7px 18px rgba(70,50,60,.055);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    background .2s ease;
+}
+
+.quick-row button:hover{
+  transform:translateY(-2px);
+
+  background:#fffdfb;
+
+  box-shadow:0 11px 24px rgba(70,50,60,.09);
+}
+
+.quick-row button:active{
+  transform:scale(.98);
+}
+
+/* phone */
+@media(max-width:600px){
+  .quick-row{
+    gap:8px;
+    margin-top:15px;
+  }
+
+  .quick-row button{
+    min-height:43px;
+    padding:9px 10px;
+    border-radius:14px;
+    font-size:11px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — MEMORIES PREMIUM V1
+   Visual only — functionality unchanged
+   ========================================================= */
+
+.memory-list .item-card,
+#memory-list .item-card{
+  overflow:hidden;
+  background:linear-gradient(145deg,#fffdfb,#faf5ff);
+  border:1px solid #e3d9ef;
+  border-radius:22px;
+  box-shadow:0 10px 26px rgba(70,50,80,.07);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.memory-list .item-card:hover,
+#memory-list .item-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 32px rgba(70,50,80,.11);
+}
+
+.memory-list .item-card img,
+#memory-list .item-card img{
+  border-radius:16px;
+  box-shadow:0 5px 15px rgba(60,45,70,.08);
+}
+
+.memory-list .item-card h3,
+#memory-list .item-card h3{
+  color:#3c303f;
+  font-weight:700;
+}
+
+.memory-list .item-card p,
+#memory-list .item-card p{
+  color:#786c7d;
+}
+
+@media(max-width:600px){
+  .memory-list .item-card,
+  #memory-list .item-card{
+    border-radius:19px;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD — MEMORIES V2
+   Clean keepsake/photo style
+   ========================================================= */
+
+#memory-list .item-card{
+  background:#fffaf7;
+  border:1px solid #f0dfd8;
+  border-radius:20px;
+  padding:15px;
+  box-shadow:0 7px 20px rgba(75,55,55,.055);
+}
+
+#memory-list .item-card img{
+  width:100%;
+  display:block;
+  border-radius:15px;
+  object-fit:cover;
+}
+
+#memory-list .item-card h3{
+  margin-top:12px;
+  color:#403338;
+  font-size:16px;
+  font-weight:700;
+}
+
+#memory-list .item-card p{
+  color:#806f73;
+  font-size:12px;
+  line-height:1.5;
+}
+
+#memory-list .item-card button{
+  border-radius:12px;
+}
+
+@media(max-width:600px){
+  #memory-list .item-card{
+    padding:12px;
+    border-radius:18px;
+  }
+
+  #memory-list .item-card h3{
+    font-size:15px;
+  }
+
+  #memory-list .item-card p{
+    font-size:11px;
+  }
+}
+
+/* =========================================================
+   OUR LITTLE WORLD — MEMORIES V3
+   Romantic memory gallery header
+   Visual only — functionality unchanged
+   ========================================================= */
+
+.memory-toolbar{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:20px;
+  padding:6px 2px;
+}
+
+.memory-search{
+  flex:1;
+  min-height:48px;
+  padding:0 17px;
+  border-radius:17px;
+  border:1px solid #eadde1;
+  background:rgba(255,255,255,.9);
+  color:#403338;
+  font-size:13px;
+  outline:none;
+  box-shadow:0 7px 20px rgba(75,55,65,.055);
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+
+.memory-search::placeholder{
+  color:#a5969b;
+}
+
+.memory-search:focus{
+  border-color:#d8b8c4;
+  box-shadow:0 0 0 4px rgba(216,184,196,.13),0 8px 22px rgba(75,55,65,.07);
+}
+
+.memory-add-btn{
+  min-height:48px;
+  padding:0 17px;
+  border-radius:17px;
+  white-space:nowrap;
+  box-shadow:0 8px 20px rgba(90,55,70,.10);
+}
+
+.memory-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.memory-card{
+  overflow:hidden;
+  border-radius:22px;
+  background:#fff;
+  border:1px solid rgba(210,190,195,.45);
+  box-shadow:0 10px 28px rgba(70,50,60,.07);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+
+.memory-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 34px rgba(70,50,60,.11);
+}
+
+.memory-visual{
+  position:relative;
+  overflow:hidden;
+  background:#f5eef1;
+}
+
+.memory-photo{
+  width:100%;
+  height:220px;
+  display:block;
+  object-fit:cover;
+}
+
+.memory-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#a18f96;
+  font-size:13px;
+  background:linear-gradient(135deg,#f7eff3,#eee6f0);
+}
+
+.memory-tag{
+  position:absolute;
+  left:12px;
+  bottom:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.88);
+  color:#6e5962;
+  font-size:10px;
+  font-weight:700;
+  box-shadow:0 5px 14px rgba(50,35,45,.10);
+  backdrop-filter:blur(8px);
+}
+
+.memory-info{
+  padding:16px;
+}
+
+.memory-info .date{
+  margin-bottom:6px;
+  color:#a17f8c;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+.memory-info h3{
+  margin:0 0 7px;
+  color:#403338;
+  font-size:17px;
+  line-height:1.3;
+}
+
+.memory-info p{
+  margin:0;
+  color:#806f73;
+  font-size:12px;
+  line-height:1.55;
+}
+
+.memory-card .card-actions{
+  display:flex;
+  gap:8px;
+  margin-top:14px;
+}
+
+.memory-card .card-actions button{
+  min-height:34px;
+  padding:7px 12px;
+  border-radius:11px;
+  font-size:11px;
+}
+
+@media(max-width:600px){
+  .memory-toolbar{
+    gap:8px;
+    margin-bottom:15px;
+  }
+
+  .memory-search{
+    min-height:44px;
+    padding:0 13px;
+    font-size:12px;
+  }
+
+  .memory-add-btn{
+    min-height:44px;
+    padding:0 12px;
+    font-size:11px;
+  }
+
+  .memory-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .memory-photo{
+    height:190px;
+  }
+
+  .memory-info{
+    padding:13px;
+  }
+
+  .memory-info h3{
+    font-size:15px;
+  }
+}
+/* =========================================================
+   OUR LITTLE WORLD — CREATIVE PHOTO MEMORIES
+   Photo-first private couple gallery
+   ========================================================= */
+
+.memory-toolbar{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:4px 0 18px;
+}
+
+.memory-search{
+  flex:1;
+  min-height:48px;
+  padding:0 17px;
+  border-radius:18px;
+  border:1px solid #eadde2;
+  background:rgba(255,255,255,.94);
+  color:#403338;
+  font-size:13px;
+  outline:none;
+  box-shadow:0 8px 24px rgba(70,50,60,.07);
+}
+
+.memory-search::placeholder{
+  color:#aa9ba0;
+}
+
+.memory-search:focus{
+  border-color:#d8b5c2;
+  box-shadow:0 0 0 4px rgba(216,181,194,.14),0 10px 26px rgba(70,50,60,.08);
+}
+
+.memory-add-btn{
+  min-height:48px;
+  padding:0 16px;
+  border-radius:17px;
+  white-space:nowrap;
+}
+
+/* Gallery */
+
+.memory-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.memory-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:24px;
+  background:#fff;
+  border:1px solid rgba(210,190,198,.45);
+  box-shadow:0 12px 30px rgba(65,48,57,.075);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+
+.memory-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 38px rgba(65,48,57,.13);
+}
+
+/* Photo */
+
+.memory-visual{
+  position:relative;
+  overflow:hidden;
+  background:#f3e9ed;
+}
+
+.memory-photo{
+  width:100%;
+  height:260px;
+  display:block;
+  object-fit:cover;
+  transition:transform .45s ease;
+}
+
+.memory-card:hover .memory-photo{
+  transform:scale(1.035);
+}
+
+.memory-placeholder{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 30% 25%,rgba(255,255,255,.8),transparent 35%),
+    linear-gradient(145deg,#f7eef2,#eee4ec);
+  color:#a18f96;
+  font-size:13px;
+}
+
+/* Soft photo overlay */
+
+.memory-visual::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:35%;
+  background:linear-gradient(to top,rgba(35,24,30,.30),transparent);
+  pointer-events:none;
+}
+
+/* Memory badge */
+
+.memory-tag{
+  position:absolute;
+  z-index:2;
+  left:13px;
+  bottom:13px;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(255,255,255,.88);
+  color:#715a63;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.2px;
+  box-shadow:0 5px 16px rgba(40,28,34,.13);
+  backdrop-filter:blur(9px);
+}
+
+/* Content */
+
+.memory-info{
+  padding:17px;
+}
+
+.memory-info .date{
+  margin-bottom:6px;
+  color:#a27f8d;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+}
+
+.memory-info h3{
+  margin:0 0 7px;
+  color:#3f3338;
+  font-size:18px;
+  line-height:1.3;
+}
+
+.memory-info p{
+  margin:0;
+  color:#806f74;
+  font-size:12px;
+  line-height:1.6;
+}
+
+/* Buttons */
+
+.memory-card .card-actions{
+  display:flex;
+  gap:8px;
+  margin-top:15px;
+}
+
+.memory-card .card-actions button{
+  min-height:34px;
+  padding:7px 12px;
+  border-radius:11px;
+  border:1px solid #eadfe2;
+  background:#fff;
+  color:#65545b;
+  font-size:11px;
+  font-weight:600;
+}
+
+/* Creative alternating gallery sizes */
+
+.memory-card:nth-child(3n+1) .memory-photo{
+  height:285px;
+}
+
+.memory-card:nth-child(3n+2) .memory-photo{
+  height:220px;
+}
+
+.memory-card:nth-child(3n) .memory-photo{
+  height:245px;
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+  .memory-toolbar{
+    gap:7px;
+    margin-bottom:14px;
+  }
+
+  .memory-search{
+    min-height:44px;
+    padding:0 13px;
+    font-size:12px;
+    border-radius:15px;
+  }
+
+  .memory-add-btn{
+    min-height:44px;
+    padding:0 11px;
+    border-radius:15px;
+    font-size:11px;
+  }
+
+  .memory-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .memory-card{
+    border-radius:21px;
+  }
+
+  .memory-photo,
+  .memory-card:nth-child(3n+1) .memory-photo,
+  .memory-card:nth-child(3n+2) .memory-photo,
+  .memory-card:nth-child(3n) .memory-photo{
+    height:225px;
+  }
+
+  .memory-info{
+    padding:14px;
+  }
+
+  .memory-info h3{
+    font-size:16px;
+  }
+
+  .memory-info p{
+    font-size:11px;
+  }
+}
+
+/* =========================================================
+   MEMORIES — HEARTFELT INTRO
+   ========================================================= */
+
+.memory-intro{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:2px 0 18px;
+  padding:17px 18px;
+  border:1px solid rgba(214,184,197,.45);
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 0% 0%,rgba(255,225,235,.8),transparent 45%),
+    linear-gradient(135deg,#fffafb,#fdf4f7);
+  box-shadow:0 10px 28px rgba(72,48,59,.07);
+}
+
+.memory-intro-heart{
+  flex:0 0 46px;
+  width:46px;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#fff;
+  color:#b76d83;
+  font-size:28px;
+  box-shadow:0 7px 18px rgba(130,70,90,.12);
+}
+
+.memory-intro-kicker{
+  margin-bottom:4px;
+  color:#ad8291;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.2px;
+}
+
+.memory-intro h2{
+  margin:0;
+  color:#49383f;
+  font-size:19px;
+  line-height:1.3;
+  font-weight:750;
+}
+
+.memory-intro p{
+  margin:5px 0 0;
+  color:#89747c;
+  font-size:11px;
+  line-height:1.5;
+}
+
+@media(max-width:600px){
+  .memory-intro{
+    gap:10px;
+    margin-bottom:14px;
+    padding:13px;
+    border-radius:18px;
+  }
+
+  .memory-intro-heart{
+    flex-basis:38px;
+    width:38px;
+    height:38px;
+    font-size:23px;
+  }
+
+  .memory-intro-kicker{
+    font-size:8px;
+    letter-spacing:.9px;
+  }
+
+  .memory-intro h2{
+    font-size:15px;
+  }
+
+  .memory-intro p{
+    font-size:10px;
+  }
+}
+
+
+/* =========================================================
+   MEMORIES — SOFT ROMANTIC EFFECTS
+   ========================================================= */
+
+/* Gentle moving glow behind the intro */
+.memory-intro{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.memory-intro::before{
+  content:"";
+  position:absolute;
+  width:150px;
+  height:150px;
+  left:-55px;
+  top:-70px;
+  border-radius:50%;
+  background:rgba(255,190,210,.28);
+  filter:blur(25px);
+  z-index:-1;
+  animation:memorySoftGlow 5s ease-in-out infinite;
+}
+
+@keyframes memorySoftGlow{
+  0%,100%{
+    transform:translate(0,0) scale(1);
+    opacity:.55;
+  }
+  50%{
+    transform:translate(35px,18px) scale(1.15);
+    opacity:.9;
+  }
+}
+
+/* Gentle heart shimmer */
+.memory-intro-heart{
+  animation:memoryHeartGlow 3.8s ease-in-out infinite;
+}
+
+@keyframes memoryHeartGlow{
+  0%,100%{
+    transform:scale(1);
+    box-shadow:0 7px 18px rgba(130,70,90,.12);
+  }
+  50%{
+    transform:scale(1.06);
+    box-shadow:0 8px 24px rgba(170,90,120,.22);
+  }
+}
+
+/* Respect reduced-motion settings */
+@media(prefers-reduced-motion:reduce){
+  .memory-intro::before,
+  .memory-intro-heart{
+    animation:none;
+  }
+}
+
+
+/* =========================================================
+   MEMORIES — VISIBLE ROMANTIC AURA
+   ========================================================= */
+
+.memory-intro{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.memory-intro::before{
+  content:"";
+  position:absolute;
+  width:190px;
+  height:190px;
+  left:-65px;
+  top:-95px;
+  border-radius:50%;
+  background:rgba(255,145,180,.22);
+  filter:blur(28px);
+  z-index:-1;
+  animation:memoryAura 4s ease-in-out infinite;
+}
+
+.memory-intro::after{
+  content:"♡   ·   ♡";
+  position:absolute;
+  right:18px;
+  top:10px;
+  color:rgba(183,109,131,.28);
+  font-size:16px;
+  letter-spacing:9px;
+  animation:memoryFloatingHearts 4s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes memoryAura{
+  0%,100%{
+    transform:translate(0,0) scale(.9);
+    opacity:.45;
+  }
+  50%{
+    transform:translate(45px,25px) scale(1.25);
+    opacity:1;
+  }
+}
+
+@keyframes memoryFloatingHearts{
+  0%,100%{
+    transform:translateY(3px);
+    opacity:.35;
+  }
+  50%{
+    transform:translateY(-7px);
+    opacity:.85;
+  }
+}
+
+.memory-intro-heart{
+  animation:memoryHeartPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes memoryHeartPulse{
+  0%,100%{
+    transform:scale(1);
+    box-shadow:0 7px 18px rgba(130,70,90,.12);
+  }
+  50%{
+    transform:scale(1.1);
+    box-shadow:0 8px 28px rgba(183,109,131,.30);
+  }
+}
+
+@media(max-width:600px){
+  .memory-intro::after{
+    right:9px;
+    top:7px;
+    font-size:12px;
+    letter-spacing:5px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .memory-intro::before,
+  .memory-intro::after,
+  .memory-intro-heart{
+    animation:none;
+  }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD � ROMANTIC MEMORIES ANIMATION LAYER
+   Visual enhancement only � existing functionality untouched
+   ========================================================= */
+
+/* Soft moving romantic aura */
+.memories-section,
+#memoriesSection,
+.memories-container {
+    position: relative;
+    isolation: isolate;
+}
+
+.memories-section::before,
+#memoriesSection::before,
+.memories-container::before {
+    content: "";
+    position: absolute;
+    inset: -30px;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 105, 150, 0.12), transparent 28%),
+        radial-gradient(circle at 85% 70%, rgba(255, 190, 210, 0.14), transparent 30%);
+    animation: memoriesAuraMove 9s ease-in-out infinite alternate;
+    filter: blur(10px);
+}
+
+@keyframes memoriesAuraMove {
+    0% {
+        transform: scale(0.96) translate(0, 0);
+        opacity: 0.55;
+    }
+    50% {
+        transform: scale(1.03) translate(8px, -5px);
+        opacity: 0.85;
+    }
+    100% {
+        transform: scale(1.06) translate(-7px, 6px);
+        opacity: 0.65;
+    }
+}
+
+/* Romantic shimmer across memory cards */
+.memories-section .memory-card,
+#memoriesSection .memory-card,
+.memories-container .memory-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.45s cubic-bezier(.2,.8,.2,1),
+        box-shadow 0.45s ease;
+}
+
+.memories-section .memory-card::after,
+#memoriesSection .memory-card::after,
+.memories-container .memory-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -130%;
+    width: 55%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+        105deg,
+        transparent,
+        rgba(255,255,255,0.22),
+        transparent
+    );
+    transform: skewX(-18deg);
+    animation: memoryShimmer 7s ease-in-out infinite;
+}
+
+@keyframes memoryShimmer {
+    0%, 55% {
+        left: -130%;
+    }
+    75% {
+        left: 140%;
+    }
+    100% {
+        left: 140%;
+    }
+}
+
+/* Gentle floating feeling */
+.memories-section .memory-card,
+#memoriesSection .memory-card {
+    animation: memoryGentleFloat 6s ease-in-out infinite;
+}
+
+.memories-section .memory-card:nth-child(2n),
+#memoriesSection .memory-card:nth-child(2n) {
+    animation-delay: -2s;
+}
+
+.memories-section .memory-card:nth-child(3n),
+#memoriesSection .memory-card:nth-child(3n) {
+    animation-delay: -4s;
+}
+
+@keyframes memoryGentleFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Premium interaction */
+.memories-section .memory-card:hover,
+#memoriesSection .memory-card:hover,
+.memories-container .memory-card:hover {
+    transform: translateY(-8px) scale(1.015);
+    box-shadow:
+        0 18px 45px rgba(180, 50, 100, 0.16),
+        0 0 0 1px rgba(255, 150, 180, 0.12);
+}
+
+/* Main romantic heart pulse */
+.memories-section .heart,
+#memoriesSection .heart,
+.memories-section .memories-heart {
+    animation: romanticHeartbeat 2.2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes romanticHeartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    14% {
+        transform: scale(1.12);
+    }
+    28% {
+        transform: scale(1);
+    }
+    42% {
+        transform: scale(1.08);
+    }
+    56% {
+        transform: scale(1);
+    }
+}
+
+/* Soft sparkle particles */
+.memories-section::after,
+#memoriesSection::after {
+    content: "?  �  ?  �  ?  �  ?";
+    position: absolute;
+    top: 12px;
+    right: 5%;
+    pointer-events: none;
+    font-size: 13px;
+    letter-spacing: 14px;
+    opacity: 0.35;
+    animation: sparkleDrift 5s ease-in-out infinite;
+}
+
+@keyframes sparkleDrift {
+    0%, 100% {
+        transform: translateY(4px);
+        opacity: 0.2;
+    }
+    50% {
+        transform: translateY(-8px);
+        opacity: 0.55;
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .memories-section::before,
+    #memoriesSection::before,
+    .memories-container::before,
+    .memories-section::after,
+    #memoriesSection::after,
+    .memories-section .memory-card,
+    #memoriesSection .memory-card,
+    .memories-section .memory-card::after,
+    #memoriesSection .memory-card::after,
+    .memories-section .heart,
+    #memoriesSection .heart,
+    .memories-section .memories-heart {
+        animation: none !important;
+    }
+}
+
+
+/* =========================================================
+   FLOATING LOVE HEARTS � MEMORIES
+   ========================================================= */
+
+.memories-floating-hearts {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.memories-floating-hearts span {
+    position: absolute;
+    bottom: -30px;
+    left: var(--heart-left, 50%);
+    font-size: var(--heart-size, 16px);
+    opacity: 0;
+    animation:
+        memoriesHeartRise var(--heart-duration, 8s) ease-in-out infinite;
+    animation-delay: var(--heart-delay, 0s);
+    filter: drop-shadow(0 3px 8px rgba(255, 80, 130, 0.18));
+}
+
+.memories-floating-hearts span:nth-child(1) {
+    --heart-left: 8%;
+    --heart-size: 13px;
+    --heart-duration: 8s;
+    --heart-delay: 0s;
+}
+
+.memories-floating-hearts span:nth-child(2) {
+    --heart-left: 21%;
+    --heart-size: 18px;
+    --heart-duration: 10s;
+    --heart-delay: -3s;
+}
+
+.memories-floating-hearts span:nth-child(3) {
+    --heart-left: 37%;
+    --heart-size: 11px;
+    --heart-duration: 7s;
+    --heart-delay: -5s;
+}
+
+.memories-floating-hearts span:nth-child(4) {
+    --heart-left: 53%;
+    --heart-size: 17px;
+    --heart-duration: 9s;
+    --heart-delay: -2s;
+}
+
+.memories-floating-hearts span:nth-child(5) {
+    --heart-left: 68%;
+    --heart-size: 12px;
+    --heart-duration: 8s;
+    --heart-delay: -6s;
+}
+
+.memories-floating-hearts span:nth-child(6) {
+    --heart-left: 82%;
+    --heart-size: 19px;
+    --heart-duration: 11s;
+    --heart-delay: -4s;
+}
+
+.memories-floating-hearts span:nth-child(7) {
+    --heart-left: 93%;
+    --heart-size: 10px;
+    --heart-duration: 7s;
+    --heart-delay: -1s;
+}
+
+@keyframes memoriesHeartRise {
+    0% {
+        transform:
+            translate3d(0, 20px, 0)
+            rotate(-8deg)
+            scale(0.7);
+        opacity: 0;
+    }
+
+    12% {
+        opacity: 0.45;
+    }
+
+    45% {
+        transform:
+            translate3d(18px, -35vh, 0)
+            rotate(12deg)
+            scale(1);
+        opacity: 0.6;
+    }
+
+    75% {
+        transform:
+            translate3d(-16px, -70vh, 0)
+            rotate(-10deg)
+            scale(0.9);
+        opacity: 0.35;
+    }
+
+    100% {
+        transform:
+            translate3d(12px, -105vh, 0)
+            rotate(14deg)
+            scale(0.65);
+        opacity: 0;
+    }
+}
+
+/* Keep the floating layer behind the actual Memories content */
+.memories-section > .memories-floating-hearts,
+#memoriesSection > .memories-floating-hearts {
+    z-index: -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .memories-floating-hearts span {
+        animation: none !important;
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD � DREAMY MEMORIES EFFECTS
+   Visual only � functionality untouched
+   ========================================================= */
+
+/* Cinematic entrance for memory cards */
+.memories-section .memory-card,
+#memoriesSection .memory-card {
+    opacity: 0;
+    animation:
+        memoryCinematicReveal 0.9s cubic-bezier(.22,.8,.24,1) forwards,
+        memoryGentleFloat 6s ease-in-out infinite 1.2s;
+}
+
+.memories-section .memory-card:nth-child(1),
+#memoriesSection .memory-card:nth-child(1) {
+    animation-delay: 0.08s, 1.3s;
+}
+
+.memories-section .memory-card:nth-child(2),
+#memoriesSection .memory-card:nth-child(2) {
+    animation-delay: 0.18s, 1.5s;
+}
+
+.memories-section .memory-card:nth-child(3),
+#memoriesSection .memory-card:nth-child(3) {
+    animation-delay: 0.28s, 1.7s;
+}
+
+.memories-section .memory-card:nth-child(4),
+#memoriesSection .memory-card:nth-child(4) {
+    animation-delay: 0.38s, 1.9s;
+}
+
+.memories-section .memory-card:nth-child(5),
+#memoriesSection .memory-card:nth-child(5) {
+    animation-delay: 0.48s, 2.1s;
+}
+
+@keyframes memoryCinematicReveal {
+    from {
+        opacity: 0;
+        transform: translateY(28px) scale(0.96);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Photo itself slowly comes alive */
+.memories-section .memory-photo,
+#memoriesSection .memory-photo {
+    transform: scale(1.04);
+    transition:
+        transform 1.2s cubic-bezier(.2,.8,.2,1),
+        filter 0.8s ease;
+}
+
+.memories-section .memory-card:hover .memory-photo,
+#memoriesSection .memory-card:hover .memory-photo {
+    transform: scale(1.09);
+    filter: saturate(1.06);
+}
+
+/* Soft romantic photo-edge glow */
+.memories-section .memory-visual,
+#memoriesSection .memory-visual {
+    position: relative;
+}
+
+.memories-section .memory-visual::before,
+#memoriesSection .memory-visual::before {
+    content: "?";
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    z-index: 3;
+    font-size: 11px;
+    opacity: 0;
+    pointer-events: none;
+    animation: memoryTinySparkle 4.5s ease-in-out infinite;
+}
+
+.memories-section .memory-visual::after,
+#memoriesSection .memory-visual::after {
+    content: "?";
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    z-index: 3;
+    font-size: 9px;
+    opacity: 0;
+    pointer-events: none;
+    animation: memoryTinySparkle 4.5s ease-in-out infinite 2.2s;
+}
+
+@keyframes memoryTinySparkle {
+    0%, 65%, 100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+
+    72% {
+        opacity: 0.7;
+        transform: scale(1.15) rotate(12deg);
+    }
+
+    82% {
+        opacity: 0.2;
+        transform: scale(0.85) rotate(-8deg);
+    }
+}
+
+/* �Our memory� tag gently appears */
+.memories-section .memory-tag,
+#memoriesSection .memory-tag {
+    animation: memoryTagFloat 4s ease-in-out infinite;
+}
+
+@keyframes memoryTagFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+/* Dreamy moving light behind the gallery */
+.memories-section::before,
+#memoriesSection::before,
+.memories-container::before {
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(255, 105, 150, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(255, 190, 210, 0.16),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 220, 230, 0.08),
+            transparent 40%
+        );
+    animation: dreamyMemoryLights 12s ease-in-out infinite alternate;
+}
+
+@keyframes dreamyMemoryLights {
+    0% {
+        transform: scale(0.96) translate(-10px, 5px);
+    }
+
+    50% {
+        transform: scale(1.04) translate(8px, -8px);
+    }
+
+    100% {
+        transform: scale(1.08) translate(-5px, 10px);
+    }
+}
+
+/* Keep animations comfortable on small screens */
+@media (max-width: 600px) {
+    .memories-section .memory-card,
+    #memoriesSection .memory-card {
+        animation-duration: 0.75s, 7s;
+    }
+
+    .memories-section .memory-card:hover .memory-photo,
+    #memoriesSection .memory-card:hover .memory-photo {
+        transform: scale(1.04);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .memories-section .memory-card,
+    #memoriesSection .memory-card,
+    .memories-section .memory-photo,
+    #memoriesSection .memory-photo,
+    .memories-section .memory-tag,
+    #memoriesSection .memory-tag,
+    .memories-section::before,
+    #memoriesSection::before,
+    .memories-container::before,
+    .memories-section .memory-visual::before,
+    .memories-section .memory-visual::after,
+    #memoriesSection .memory-visual::before,
+    #memoriesSection .memory-visual::after {
+        animation: none !important;
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   OUR LITTLE WORLD � HEART POP + LOVE MESSAGE
+   Visual interaction only
+   ========================================================= */
+
+.memory-love-message {
+    margin: 0 auto 22px;
+    max-width: 680px;
+    text-align: center;
+    padding: 14px 20px;
+    border-radius: 22px;
+    opacity: 0;
+    transform: translateY(8px);
+    animation: loveMessageEnter 1s ease forwards;
+    pointer-events: none;
+}
+
+.memory-love-message .love-message-heart {
+    display: inline-block;
+    margin-right: 7px;
+    animation: loveMessageHeartbeat 2s ease-in-out infinite;
+}
+
+.memory-love-message .love-message-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    opacity: 0.82;
+}
+
+@keyframes loveMessageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loveMessageHeartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1.22);
+    }
+    30% {
+        transform: scale(1);
+    }
+    45% {
+        transform: scale(1.12);
+    }
+}
+
+/* Heart-pop container */
+.memory-heart-burst {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+.memory-heart-burst span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: var(--burst-size, 18px);
+    opacity: 0;
+    animation: memoryHeartPop var(--burst-duration, 900ms) ease-out forwards;
+    transform-origin: center;
+    filter: drop-shadow(0 3px 7px rgba(220, 50, 100, 0.22));
+}
+
+.memory-heart-burst span:nth-child(1) {
+    --burst-x: -42px;
+    --burst-y: -48px;
+    --burst-rotate: -20deg;
+    --burst-size: 20px;
+    --burst-duration: 850ms;
+}
+
+.memory-heart-burst span:nth-child(2) {
+    --burst-x: 42px;
+    --burst-y: -55px;
+    --burst-rotate: 18deg;
+    --burst-size: 16px;
+    --burst-duration: 950ms;
+}
+
+.memory-heart-burst span:nth-child(3) {
+    --burst-x: -65px;
+    --burst-y: -8px;
+    --burst-rotate: -12deg;
+    --burst-size: 13px;
+    --burst-duration: 780ms;
+}
+
+.memory-heart-burst span:nth-child(4) {
+    --burst-x: 65px;
+    --burst-y: -18px;
+    --burst-rotate: 15deg;
+    --burst-size: 21px;
+    --burst-duration: 1000ms;
+}
+
+.memory-heart-burst span:nth-child(5) {
+    --burst-x: -22px;
+    --burst-y: 38px;
+    --burst-rotate: -8deg;
+    --burst-size: 12px;
+    --burst-duration: 820ms;
+}
+
+.memory-heart-burst span:nth-child(6) {
+    --burst-x: 28px;
+    --burst-y: 42px;
+    --burst-rotate: 12deg;
+    --burst-size: 15px;
+    --burst-duration: 900ms;
+}
+
+.memory-heart-burst span:nth-child(7) {
+    --burst-x: 0px;
+    --burst-y: -72px;
+    --burst-rotate: 0deg;
+    --burst-size: 11px;
+    --burst-duration: 1050ms;
+}
+
+@keyframes memoryHeartPop {
+    0% {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            translate(0, 0)
+            scale(0.25)
+            rotate(0deg);
+    }
+
+    15% {
+        opacity: 1;
+        transform:
+            translate(-50%, -50%)
+            translate(0, 0)
+            scale(1.15)
+            rotate(var(--burst-rotate));
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(-50%, -50%)
+            translate(var(--burst-x), var(--burst-y))
+            scale(0.72)
+            rotate(var(--burst-rotate));
+    }
+}
+
+/* Tiny click glow on the memory card */
+.memory-card.memory-loved {
+    animation:
+        memoryLovedPulse 650ms ease-out !important;
+}
+
+@keyframes memoryLovedPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.025);
+        filter: brightness(1.04);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .memory-love-message,
+    .memory-love-message .love-message-heart,
+    .memory-heart-burst span,
+    .memory-card.memory-loved {
+        animation: none !important;
+    }
+
+    .memory-love-message {
+        opacity: 1;
+        transform: none;
+    }
+}
+
